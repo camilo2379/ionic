@@ -3,6 +3,7 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 declare var google;
 import { from } from 'rxjs';
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-ventas',
   templateUrl: './ventas.page.html',
@@ -28,7 +29,8 @@ export class VentasPage implements OnInit {
     const mapEle: HTMLElement = document.getElementById('map');
     const map= new google.maps.Map(mapEle, {
      center: myLatLng,
-     zoom:12
+     zoom:12,
+     title:'estoy aqui'
     });
   }
  
