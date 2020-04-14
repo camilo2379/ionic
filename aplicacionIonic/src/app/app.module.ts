@@ -12,7 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
 import{firebaseConfig} from "../environments/environment";
 import{AngularFireModule} from "@angular/fire";
 import{AngularFireAuthModule} from "@angular/fire/auth";
-import { Geolocation } from '@ionic-native/geolocation';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import {GoogleMaps} from '@ionic-native/google-maps';
 
 import { from } from 'rxjs';
 @NgModule({
@@ -28,7 +29,8 @@ import { from } from 'rxjs';
   providers: [
     StatusBar,
     SplashScreen,
-    
+    Geolocation,
+    GoogleMaps,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
